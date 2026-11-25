@@ -1,0 +1,78 @@
+/* Shared look for the Chrome Web Store images. */
+:root {
+  --bg: #faf6f0;
+  --ink: #2b2522;
+  --muted: #7a6f66;
+  --accent: #d9822b;
+  --accent-soft: #fbe9d6;
+  --card: #ffffff;
+  --line: #ece4da;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "DejaVu Sans", "Noto Sans Armenian", "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.stage {
+  display: grid;
+  grid-template-columns: 430px 1fr;
+  align-items: center;
+  gap: 64px;
+  height: 100%;
+  padding: 0 80px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.logo {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 44px;
+  line-height: 1.15;
+  margin: 18px 0 18px;
+  letter-spacing: -0.01em;
+}
+
+.lead {
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 0;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 24px 60px rgba(60, 40, 20, 0.12);
+}
+
+.arrow { color: var(--accent); font-weight: 700; }
+.latin { font-family: "DejaVu Sans Mono", ui-monospace, monospace; }

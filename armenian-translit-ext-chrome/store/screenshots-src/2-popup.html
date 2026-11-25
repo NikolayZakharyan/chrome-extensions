@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .features { list-style: none; padding: 0; margin: 30px 0 0; display: grid; gap: 18px; }
+  .features li { display: flex; gap: 14px; font-size: 19px; line-height: 1.4; }
+  .features b { display: block; }
+  .features span.sub { color: var(--muted); font-size: 16px; }
+  .dot {
+    flex: none; width: 28px; height: 28px; border-radius: 50%;
+    background: var(--accent-soft); color: var(--accent);
+    display: grid; place-items: center; font-weight: 700; font-size: 15px;
+  }
+  .kbd {
+    font-family: "DejaVu Sans Mono", monospace; font-size: 15px;
+    background: #fff; border: 1px solid var(--line); border-bottom-width: 3px;
+    border-radius: 6px; padding: 1px 7px;
+  }
+  .popup-wrap { display: grid; place-items: center; }
+  .popup-frame {
+    width: 320px; height: 540px; border: 0; border-radius: 14px;
+    background: #1f1e1d;
+    transform: scale(1.32);
+    box-shadow: 0 30px 70px rgba(30, 20, 10, 0.3);
+  }
+</style>
+</head>
+<body>
+<div class="stage">
+  <div>
+    <span class="eyebrow"><span class="logo">Ա</span> Armenian Translit</span>
+    <h1>Simple controls, always close</h1>
+    <ul class="features">
+      <li><span class="dot">1</span><div><b>On or off in one click</b><span class="sub">or press <span class="kbd">Alt+Shift+H</span> anywhere</span></div></li>
+      <li><span class="dot">2</span><div><b>Turn it off for one site</b><span class="sub">it stays on everywhere else</span></div></li>
+      <li><span class="dot">3</span><div><b>Try box and cheat sheet</b><span class="sub">see how each letter converts</span></div></li>
+    </ul>
+  </div>
+  <div class="popup-wrap">
+    <iframe class="popup-frame" src="../../src/popup/popup.html"></iframe>
+  </div>
+</div>
+</body>
+</html>

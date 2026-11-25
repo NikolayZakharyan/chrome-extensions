@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .composer { padding: 28px 32px 30px; }
+  .composer-head {
+    display: flex; align-items: center; gap: 14px;
+    padding-bottom: 18px; border-bottom: 1px solid var(--line);
+    font-size: 17px; font-weight: 700;
+  }
+  .avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, #e9a15a, #c9661f);
+  }
+  .text {
+    font-size: 27px; line-height: 1.6; padding: 24px 0 6px; min-height: 190px;
+  }
+  .typing {
+    border-bottom: 3px solid var(--accent);
+    background: var(--accent-soft);
+    padding: 0 4px;
+    border-radius: 4px 4px 0 0;
+  }
+  .caret {
+    display: inline-block; width: 2px; height: 1.1em; background: var(--ink);
+    vertical-align: -0.15em; margin-left: 2px;
+  }
+  .tip {
+    display: inline-block; margin-left: 12px; vertical-align: 0.25em;
+    background: var(--ink); color: #fff; font-size: 15px; font-weight: 700;
+    padding: 6px 12px; border-radius: 8px;
+  }
+  .pairs { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+  .pair {
+    background: var(--card); border: 1px solid var(--line); border-radius: 999px;
+    padding: 10px 18px; font-size: 18px;
+  }
+  .pair .latin { color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="stage">
+  <div>
+    <span class="eyebrow"><span class="logo">Ա</span> Armenian Translit</span>
+    <h1>Type Armenian with English letters</h1>
+    <p class="lead">Each word turns Armenian when you press Space: in posts, chats, emails and search boxes.</p>
+  </div>
+  <div>
+    <div class="card composer">
+      <div class="composer-head"><span class="avatar"></span> New post</div>
+      <div class="text" lang="hy">
+        <span data-latin="Barev bolorin! Aysor Yerevanum shat lav eghanak e. Inch ka dzer mot?"></span>
+        <span style="white-space: nowrap"><span class="typing latin">Sirov</span><span class="caret"></span></span>
+        <span class="tip">Space <span class="arrow">→</span> <span data-latin="Sirov"></span></span>
+      </div>
+    </div>
+    <div class="pairs">
+      <span class="pair"><span class="latin">barev</span> <span class="arrow">→</span> <span data-latin="barev"></span></span>
+      <span class="pair"><span class="latin">vonc es</span> <span class="arrow">→</span> <span data-latin="vonc es"></span></span>
+      <span class="pair"><span class="latin">shnorhakalutyun</span> <span class="arrow">→</span> <span data-latin="shnorhakalutyun"></span></span>
+    </div>
+  </div>
+</div>
+<script src="../../src/engine/rules.js"></script>
+<script src="../../src/engine/dictionary.js"></script>
+<script src="../../src/engine/translit.js"></script>
+<script src="fill.js"></script>
+</body>
+</html>

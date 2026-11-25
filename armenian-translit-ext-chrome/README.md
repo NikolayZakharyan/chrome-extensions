@@ -37,6 +37,14 @@ src/
   popup/               on/off switches, try-it box, cheat sheet
   background.js        hotkey + badge
 tests/                 engine tests
+scripts/
+  build.sh             makes the Web Store ZIP (runs tests first)
+  screenshots.mjs      renders store images with headless Chrome
+store/
+  listing.md           every Web Store field, ready to paste + checklist
+  privacy-policy.md    privacy policy (host it at a public URL)
+  screenshots-src/     HTML sources of the store images
+  images/              rendered screenshots and promo tile
 ```
 
 Words are replaced with `document.execCommand("insertText")`, so the page's undo
@@ -52,6 +60,13 @@ history works and frameworks like React see a normal input event.
   dictionary under the same name, then set `scheme` in the settings.
 
 Run the tests with `npm test` (Node 18+, no dependencies).
+
+## Publishing to the Chrome Web Store
+
+1. Bump `version` in `manifest.json` (the Store rejects a version it has seen).
+2. `npm run build` → `dist/armenian-translit-<version>.zip`
+3. If the popup or texts changed: `npm run screenshots`
+4. Follow `store/listing.md`
 
 ## Known limits
 

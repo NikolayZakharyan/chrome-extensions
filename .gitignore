@@ -5,3 +5,6 @@
 .DS_Store
 Thumbs.db
 *.swp
+
+# Build output
+dist/
