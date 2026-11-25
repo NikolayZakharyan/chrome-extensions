@@ -8,3 +8,7 @@ Thumbs.db
 
 # Build output
 dist/
+
+# Signing keys and packed builds (never commit the .pem)
+*.pem
+*.crx
