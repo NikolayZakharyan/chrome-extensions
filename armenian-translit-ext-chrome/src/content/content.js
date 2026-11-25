@@ -151,7 +151,12 @@
         const ctx = caretContext(target);
         const conversion = last;
         last = null;
-        if (ctx && undoLastConversion(ctx, conversion)) e.preventDefault();
+        if (ctx && undoLastConversion(ctx, conversion)) {
+          // We handled this Backspace. Stop rich editors (Lexical on
+          // Facebook, Draft.js...) from also deleting a character.
+          e.preventDefault();
+          e.stopImmediatePropagation();
+        }
         return;
       }
       last = null;
