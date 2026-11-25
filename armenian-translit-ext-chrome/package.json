@@ -1,0 +1,7 @@
+{
+  "name": "armenian-translit-ext-chrome",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/*.test.js"
+  }
+}

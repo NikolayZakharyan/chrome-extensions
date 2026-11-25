@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Armenian Translit</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1>Armenian Translit</h1>
+    <span class="hint" id="shortcut"></span>
+  </header>
+
+  <label class="row">
+    <span>Convert as I type</span>
+    <input type="checkbox" class="switch" id="enabled">
+  </label>
+  <label class="row" id="site-row">
+    <span>On this site <span class="muted" id="host"></span></span>
+    <input type="checkbox" class="switch" id="site">
+  </label>
+
+  <section>
+    <h2>Try it</h2>
+    <textarea id="try" rows="2" placeholder="Barev, vonc es?" spellcheck="false"></textarea>
+    <div id="out" class="out" lang="hy"></div>
+  </section>
+
+  <section>
+    <h2>Cheat sheet</h2>
+    <table class="cheat" lang="hy">
+      <tr><td>sh</td><td>շ</td><td>ch</td><td>չ</td><td>ch'</td><td>ճ</td></tr>
+      <tr><td>zh</td><td>ժ</td><td>kh / x</td><td>խ</td><td>gh</td><td>ղ</td></tr>
+      <tr><td>c / ts</td><td>ց</td><td>c' / ts'</td><td>ծ</td><td>dz</td><td>ձ</td></tr>
+      <tr><td>t</td><td>տ</td><td>t'</td><td>թ</td><td>j</td><td>ջ</td></tr>
+      <tr><td>p</td><td>պ</td><td>p'</td><td>փ</td><td>u</td><td>ու</td></tr>
+      <tr><td>k</td><td>կ</td><td>k' / q</td><td>ք</td><td>ev</td><td>և</td></tr>
+      <tr><td>e</td><td>ե</td><td>e'</td><td>է</td><td>@ / y'</td><td>ը</td></tr>
+      <tr><td>o</td><td>ո</td><td>o'</td><td>օ</td><td>rr / r'</td><td>ռ</td></tr>
+    </table>
+    <p class="hint">Backspace right after a word turns it back to English.</p>
+  </section>
+
+  <script src="../engine/rules.js"></script>
+  <script src="../engine/dictionary.js"></script>
+  <script src="../engine/translit.js"></script>
+  <script src="../shared/settings.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
